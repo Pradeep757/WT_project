@@ -1,0 +1,106 @@
+<html>
+<head>
+<style> 
+input[type=button], input[type=submit], input[type=reset] {
+    background-color:  #FF3333;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+input[type=text], select {
+    width: 30%;
+    padding: 16px 20px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color:#f2f2f2;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color:  #FF3333;
+}
+h1 {
+    text-shadow: 3px 2px red;
+}
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+function validation()
+{
+	var f=document.b.fname.value;
+	var l=document.b.lname.value;
+	var a=document.b.age.value;
+	if(f=="" || l=="" || a==""){
+		alert("please enter details");
+		return false;
+	}
+	
+}
+</script>
+
+
+</head>
+<body onload="">
+<h1 style="text-align:center;color:dodgerblue;">HOTEL SYSTEM</h1>
+<ul>
+  <li><img  src="pes_logo.png" height="50px" width="200px"></li>
+
+  <li style="float:right"><a href="#about">About</a></li>
+   <li style="float:right"><a href="#contact">Contact</a></li>
+    <li style="float:right"><a href="#news">News</a></li>
+  <li style="float:right"><a class="active" href="#home">Home</a></li>
+</ul>
+<br>
+
+<div>
+<form name=b method="GET" action="http://localhost/cgi-bin/hotel.cgi" onsubmit="return validation()">
+
+Place:<br><select id="place" name="place">
+    <option value="Bangalore">Bangalore</option>
+    <option value="Mysore">Mysore</option>
+    <option value="Hubli">Hubli</option>
+    <option value="Belagaum">Belagaum</option>
+    <option value="Bagalkot">Bagalkot</option>
+  </select><br>
+<!--hotel:<br><select id="hotel" name="hotel">
+	<option></option> -->
+
+<input type="submit">
+<input type="reset" value="Reset" onClick="window.location.reload()">
+
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,469 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+</head>
+<style> 
+input[type=button], input[type=submit], input[type=reset] {
+    background-color:  #FF3333;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+input[type=text], select {
+    width: 30%;
+    padding: 16px 20px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color:#f2f2f2;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color:  #FF3333;
+}
+h1 {
+    text-shadow: 3px 2px red;
+}
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+body {
+    background: #e9e9e9;
+    color: #9a9a9a;
+    font: 100%/1.5em "Droid Sans", sans-serif;
+    margin: 0;
+}
+
+a { text-decoration: none; }
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+h4, h5 {
+    line-height: 1.5em;
+    margin: 0;
+}
+
+hr {
+    background: #e9e9e9;
+    border: 0;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 1px;
+    margin: 0;
+    min-height: 1px;
+}
+
+img {
+    border: 0;
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.input {
+    border: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: normal;
+    margin: 0;
+}
+
+p { margin: 0; }
+
+.clearfix { *zoom: 1; } /* For IE 6/7 */
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after { clear: both; }
+
+/* ---------- LIVE-CHAT ---------- */
+
+#live-chat {
+    bottom: 0;
+    font-size: 12px;
+    right: 24px;
+    position: fixed;
+    width: 300px;
+}
+
+#live-chat header {
+    background: #293239;
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    cursor: pointer;
+    padding: 16px 24px;
+}
+
+#live-chat h4:before {
+    background: #1a8a34;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    height: 8px;
+    margin: 0 8px 0 0;
+    width: 8px;
+}
+
+#live-chat h4 {
+    font-size: 12px;
+}
+
+#live-chat h5 {
+    font-size: 10px;
+}
+
+#live-chat form {
+    padding: 24px;
+}
+
+#live-chat input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 8px;
+    outline: none;
+    width: 234px;
+}
+
+.chat-message-counter {
+    background: #e62727;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: none;
+    font-size: 12px;
+    font-weight: bold;
+    height: 28px;
+    left: 0;
+    line-height: 28px;
+    margin: -15px 0 0 -15px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 28px;
+}
+
+.chat-close {
+    background: #1b2126;
+    border-radius: 50%;
+    color: #fff;
+    display: block;
+    float: right;
+    font-size: 10px;
+    height: 16px;
+    line-height: 16px;
+    margin: 2px 0 0 0;
+    text-align: center;
+    width: 16px;
+}
+
+.chat {
+    background: #fff;
+}
+
+.chat-history {
+    height: 252px;
+    padding: 8px 24px;
+    overflow-y: scroll;
+}
+
+.chat-message {
+    margin: 16px 0;
+}
+
+.chat-message img {
+    border-radius: 50%;
+    float: left;
+}
+
+.chat-message-content {
+    margin-left: 56px;
+}
+
+.chat-time {
+    float: right;
+    font-size: 10px;
+}
+
+.chat-feedback {
+    font-style: italic; 
+    margin: 0 0 0 80px;
+}
+
+</style>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+function validation()
+{
+	var f=document.b.fname.value;
+	var l=document.b.lname.value;
+	var a=document.b.age.value;
+	if(f=="" || l=="" || a==""){
+		alert("please enter details");
+		return false;
+	}
+	
+}
+</script>
+
+
+<body onload="">
+<h1 style="text-align:center;color:dodgerblue;">HOTEL SYSTEM</h1>
+<ul>
+  <li><img  src="pes_logo.png" height="50px" width="200px"></li>
+
+  <li style="float:right"><a href="#about">About</a></li>
+   <li style="float:right"><a href="#contact">Contact</a></li>
+    <li style="float:right"><a href="#news">News</a></li>
+  <li style="float:right"><a class="active" href="#home">Home</a></li>
+</ul>
+<br>
+
+<div>
+<form name=b method="GET" action="http://localhost/cgi-bin/hotel.cgi" onsubmit="return validation()">
+
+Place:<br><select id="place" name="place">
+    <option value="Bangalore">Bangalore</option>
+    <option value="Mysore">Mysore</option>
+    <option value="Hubli">Hubli</option>
+    <option value="Belagaum">Belagaum</option>
+    <option value="Bagalkot">Bagalkot</option>
+  </select><br>
+<!--hotel:<br><select id="hotel" name="hotel">
+	<option></option> -->
+
+<input type="submit">
+<input type="reset" value="Reset" onClick="window.location.reload()">
+
+</form>
+</div>
+
+
+
+<div id="live-chat">
+        
+        <header class="clearfix">
+            
+            <a href="#" class="chat-close" onclick="close()">x</a>
+
+            <h4>You</h4>
+
+            <span class="chat-message-counter">3</span>
+
+        </header>
+
+        <div class="chat">
+            
+            <div class="chat-history" id="chat">
+                
+                <div class="chat-message clearfix">
+                    
+                    <!--<img src="http://lorempixum.com/32/32/people" alt="" width="32" height="32">-->
+
+                    <div class="chat-message-content clearfix">
+                        
+                        <!--<span class="chat-time">13:35</span>
+
+                        <h5>John Doe</h5>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, explicabo quasi ratione odio dolorum harum.</p>-->
+
+                    </div> <!-- end chat-message-content -->
+
+                </div> <!-- end chat-message -->
+
+                <hr>
+
+                <div class="chat-message clearfix">
+                    
+                    <!--<img src="http://gravatar.com/avatar/2c0ad52fc5943b78d6abe069cc08f320?s=32" alt="" width="32" height="32">-->
+
+                    <div class="chat-message-content clearfix">
+                        
+                       <!-- <span class="chat-time">13:37</span>
+
+                        <h5>Marco Biedermann</h5>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, nulla accusamus magni vel debitis numquam qui tempora rem voluptatem delectus!</p>-->
+
+                    </div> <!-- end chat-message-content -->
+
+                </div> <!-- end chat-message -->
+
+                <hr>
+
+                <div class="chat-message clearfix">
+                    
+                    <!--<img src="http://lorempixum.com/32/32/people" alt="" width="32" height="32">-->
+
+                    <div class="chat-message-content clearfix">
+                        
+                       <!-- <span class="chat-time">13:38</span>
+
+                        <h5>John Doe</h5>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>-->
+
+                    </div> <!-- end chat-message-content -->
+
+                </div> <!-- end chat-message -->
+
+                <hr>
+
+            </div> <!-- end chat-history -->
+
+            <p class="chat-feedback">Your partner is typing…</p>
+
+
+                <fieldset>
+                    
+                    <input class="input" type="text" id="myInput" placeholder="Type your message…" autofocus>
+                    <input type="hidden">
+
+                </fieldset>
+
+
+        </div> <!-- end chat -->
+
+    </div> <!-- end live-chat -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+</body>
+
+
+<script>
+
+function close(){
+
+	var x = document.getElementById("live-chat");
+	x.style.display="none";
+}
+
+
+
+var input = document.getElementById("myInput");
+//alert("hi");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   //alert("sent");
+   var data = input.value;
+   //alert(data);
+   var jobj = {"msg":data};
+   input.value='';
+   
+   var div1 = document.createElement("div");
+   div1.classList.add("chat-message");
+   var div2 = document.createElement("div");
+   div2.classList.add("chat-message-content");
+   var sp1 = document.createElement("span");
+   sp1.classList.add("chat-time")
+   var head1 = document.createElement("h5");
+   var t = document.createTextNode("You");
+   //head1.innterHTML = "You";
+   head1.appendChild(t);
+   var para1 = document.createElement("p");
+   para1.innerHTML = data;
+   div2.appendChild(sp1);
+   div2.appendChild(head1);
+   div2.appendChild(para1);
+   var img = document.createElement("img");
+   img.src="";
+   img.width="32";
+   img.height="32";
+   div1.appendChild(img);
+   div1.appendChild(div2);
+   var h = document.createElement("hr");
+   
+   var x = document.getElementById("chat");
+   x.appendChild(h);
+   x.appendChild(div1);
+   div1.scrollIntoView();
+   
+   var req = new XMLHttpRequest();
+   req.open("POST","http://localhost:5000/api/chat",true);
+   req.setRequestHeader("Content-Type","application/json");
+   req.send(JSON.stringify(jobj));
+   req.onload=function(){
+   
+   		if (req.status==200){
+   			var d = JSON.parse(this.response);
+   			//alert(d['msg']);
+   			addelement(d['msg']);
+   			
+   		}
+   }
+   
+  }
+});
+
+function addelement(msg){
+
+	
+   var div1 = document.createElement("div");
+   div1.classList.add("chat-message");
+   var div2 = document.createElement("div");
+   div2.classList.add("chat-message-content");
+   var sp1 = document.createElement("span");
+   sp1.classList.add("chat-time")
+   var head1 = document.createElement("h5");
+   var t = document.createTextNode("Bot");
+   //head1.innterHTML = "You";
+   head1.appendChild(t);
+   var para1 = document.createElement("p");
+   para1.innerHTML = msg;
+   div2.appendChild(sp1);
+   div2.appendChild(head1);
+   div2.appendChild(para1);
+   var img = document.createElement("img");
+   img.src="";
+   img.width="32";
+   img.height="32";
+   div1.appendChild(img);
+   div1.appendChild(div2);
+   var h = document.createElement("hr");
+   
+   var x = document.getElementById("chat");
+   x.appendChild(h);
+   x.appendChild(div1);
+   div1.scrollIntoView();
+
+}
+
+
+</script>
+</html>
